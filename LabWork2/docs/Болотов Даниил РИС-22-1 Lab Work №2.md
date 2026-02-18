@@ -8,7 +8,8 @@
 ---
 
 ## 2. Диаграмма контейнеров
-<img width="1459" height="1171" alt="диаграмма контейнеров drawio" src="https://github.com/user-attachments/assets/e91b3c41-eac2-4679-b934-b988143e9e60" />
+<img width="1579" height="1221" alt="диаграмма контейнеров drawio (1)" src="https://github.com/user-attachments/assets/a9537dbe-fef7-4b18-b3b1-a65463b92a76" />
+
 
 ### 1. Акторы/Пользователи:
   - Директор компании - стратегическое управление
