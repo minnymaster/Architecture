@@ -3,13 +3,14 @@
 ---
 
 ## 1. Диаграмма контейнеров
-<img width="1579" height="1221" alt="диаграмма контейнеров drawio (1)" src="https://github.com/user-attachments/assets/a9537dbe-fef7-4b18-b3b1-a65463b92a76" />
+<img width="1579" height="1222" alt="диаграмма контейнеров drawio (3)" src="https://github.com/user-attachments/assets/946e21a7-45dc-49fb-a956-fe5f82bba8d9" />
+
 
 ---
 
 ## 2. Диаграмма компонентов
+<img width="871" height="781" alt="Диаграмма компонентов drawio (3)" src="https://github.com/user-attachments/assets/8a03a67c-05f1-4249-9872-ae646c64add2" />
 
-<img width="801" height="831" alt="Диаграмма компонентов drawio" src="https://github.com/user-attachments/assets/2d7adcfe-2d8e-4039-8641-6b8e61872994" />
 
 ---
 
@@ -18,29 +19,26 @@
 
 ```mermaid
 sequenceDiagram
-    participant Employee as Сотрудник компании
-    participant Frontend as Компоненты фронтенда
+    participant LearningAPIGateway as Learning API Gateway
     participant Backend as Компоненты бэкенда
     participant LLM as LLM
-    participant Database as Certification Database
+    participant DB@{ "type": "database" }
 
-    Employee->>Frontend: Запрос аттестации/оценки ответов
-    Frontend->>Backend: Запрос теста
+    LearningAPIGateway->>Backend: Запрос теста
     Backend->>LLM: Запрос вопросов для теста
-    LLM->>Database: Запрос данных для анализа
-    Database-->>LLM: Передача данных для анализа
+    LLM->>DB: Запрос данных для анализа
+    DB-->>LLM: Передача данных для анализа
     LLM-->>Backend: Формирование теста
-    Backend-->>Frontend: Передача теста
-    Frontend-->>Employee: Отображение теста
-    Employee->>Frontend: Передача результатов
-    Frontend->>Backend: Передача результатов
+    Backend-->>LearningAPIGateway: Передача теста
+    LearningAPIGateway->>Backend: Передача результатов
     Backend->>LLM: Передача результатов для обработки
-    LLM->>Database: Запрос данных для анализа
-    Database-->>LLM: Передача данных для анализа
+    LLM->>DB: Запрос данных для анализа
+    DB-->>LLM: Передача данных для анализа
     LLM-->>Backend: Оценка результатов
-    Backend-->>Frontend: Передача результатов/обратной связи
-    Frontend-->>Employee: Отображение результатов/обратной связи
+    Backend-->>LearningAPIGateway: Передача результатов/обратной связи
+
 ```
+
 
 ---
 
@@ -447,10 +445,7 @@ class TestService {
 ### PoC 
 Создание прототипа для проверки жизнеспособности концепции.
 
-- **Использовать.** Особенно для проверки интеграции с языковой моделью (LLM) для генерации вопросов и оценки ответов.
-- **Обоснование:**
-  - Прототип позволит проверить, насколько эффективно LLM может генерировать вопросы и оценивать ответы.
-  - Это поможет избежать рисков и затрат на разработку полноценной системы, если концепция окажется нежизнеспособной.
+- **Отказ.** Проверка концепции не треубуется, запрос на неё есть, возможно, потребуется сменить модель или датасет, но это лишь вопрос инструмента.
 
 
 
