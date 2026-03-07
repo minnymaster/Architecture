@@ -3,12 +3,14 @@
 ---
 
 ## 1. Диаграмма системеного контекста
-<img width="1262" height="731" alt="диаграмма системного контекста drawio" src="https://github.com/user-attachments/assets/31fbe533-5d27-4c60-b565-997ff27543e7" />
+<img width="1261" height="471" alt="диаграмма системного контекста drawio (1)" src="https://github.com/user-attachments/assets/f5ebba2f-6a4c-48b7-bfbd-46852d9dc04e" />
+
 
 ---
 
 ## 2. Диаграмма контейнеров
-<img width="1579" height="1221" alt="диаграмма контейнеров drawio (1)" src="https://github.com/user-attachments/assets/a9537dbe-fef7-4b18-b3b1-a65463b92a76" />
+<img width="1579" height="1222" alt="диаграмма контейнеров drawio (3)" src="https://github.com/user-attachments/assets/c94b1366-1234-4c4b-841a-a0140d55e399" />
+
 
 
 ### 1. Акторы/Пользователи:
@@ -94,6 +96,8 @@
 ## 2. Диаграмма компонентов
 
 <img width="801" height="831" alt="Диаграмма компонентов drawio" src="https://github.com/user-attachments/assets/2d7adcfe-2d8e-4039-8641-6b8e61872994" />
+
+
 
 ### Основные компоненты:
 1. Компонент фронтенда
